@@ -1,1 +1,9 @@
+// base
+@import "node_modules/samos/reset.scss";
+@import "base/global";
+@import "base/variables";
+
+// atoms
+@import "atom/social";
+// modules
 @import "module/header";

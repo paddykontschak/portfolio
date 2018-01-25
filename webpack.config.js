@@ -3,7 +3,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   entry: ['./src/js/app.js', './src/scss/app.scss'],
   output: {
-    filename: 'dist/app.js'
+    filename: 'dist/js/app.js'
   },
   module: {
 
@@ -17,12 +17,20 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+            useRelativePath: true,
+            outputPath: 'dist/img/'
+        }
       }
     ]
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'dist/[name].css',
+      filename: 'dist/css/[name].css',
       allChunks: true,
     }),
   ],

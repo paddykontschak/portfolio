@@ -1,3 +1,44 @@
-body {
-  background-color: beige;
+@import "../base/variables";
+
+header {
+  height: 500px;
+  background-color: $header-color;
+  font-size: 24px;
+  text-align: center;
+
+  pagelimit {
+    background-image: url("../img/patrick.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    align-self: start;
+    line-height: .8;
+  }
+
+  .firstname,
+  .lastname {
+    display: block;
+  }
+
+  .firstname {
+    font-size: 64px;
+  }
+
+  .lastname {
+    font-size: 43px;
+  }
+
+  hireme {
+    align-self: end;
+  }
+
+  .hireme {
+    display: inline-block;
+    padding: 0 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: solid 4px $text-color
+  }
 }
