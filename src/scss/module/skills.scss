@@ -1,0 +1,18 @@
+skills {
+  skillset {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: 120px;
+    font-size: 50px;
+    padding-top: 20px;
+
+    svg {
+      justify-self: center;
+      cursor: pointer;
+
+      &:hover {
+        color: lighten($text-color, 10%);
+      }
+    }
+  }
+}
