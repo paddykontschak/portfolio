@@ -176,15 +176,42 @@
            Delfter Straße<br/>
           16 28259 Bremen
         </address>
+        <div id="map-wws" class="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map-wws'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
       </school>
       <school>
         <year>2013-2014</year>
-        <degree> Abitur</degree>
         <address>
           Karlsruher Institut für Technologie<br/>
           Kaiserstraße 12<br/>
           76131 Karlsruhe
         </address>
+        <div id="map-kit" class="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map-wws'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
       </school>
       <school>
         <year>2015-2017 </year>
@@ -194,10 +221,25 @@
           Breitwiesenstraße 20-22<br/>
           70565 Stuttgart
         </address>
+        <div id="map-its" class="map"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map-wws'), {
+              zoom: 4,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
       </school>
     </pagelimit>
   </education>
 
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSKBULZJmqywL-VLQr5yfL04M3u1mP2H4&callback=initMap"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 </body>
 </html>
