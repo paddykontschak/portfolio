@@ -18,12 +18,15 @@
   },
   "homepage": "https://github.com/paddykontschak/portfolio#readme",
   "devDependencies": {
-    "css-loader": "^0.28.9",
+    "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^3.0.2",
-    "file-loader": "^1.1.6",
-    "node-sass": "^4.7.2",
-    "samos": "^1.0.3",
-    "sass-loader": "^6.0.6",
-    "webpack": "^3.10.0"
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.2",
+    "samos": "^1.2.0",
+    "sass-loader": "^6.0.7",
+    "webpack": "^3.12.0"
+  },
+  "dependencies": {
+    "hoek": "^5.0.3"
   }
 }
