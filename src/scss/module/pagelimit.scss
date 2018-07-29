@@ -1,7 +1,17 @@
+@import "../base/variables";
+
 pagelimit {
   display: grid;
-  width: 1024px;
-  padding: 60px;
+  padding: 30px;
   height: 100%;
-  margin: 0 auto;
+
+  @media (min-width: 768px)  {
+    padding: 60px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1025px) {
+    padding: 60px 0;
+    width: $content-width;
+  }
 }

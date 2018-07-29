@@ -1,0 +1,26 @@
+@import "../base/variables";
+
+work {
+  companies {
+    display: grid;
+    grid-template: repeat(auto-fit, minmax(288px, 1fr)) / repeat(auto-fit, minmax(288px, 1fr));
+    grid-gap: 80px;
+    padding: 30px 0;
+  }
+
+  company {
+    display: grid;
+    margin: 10px 0;
+    align-content: start;
+  }
+
+  name {
+    font-weight: 700;
+  }
+
+  address {
+    padding-top: 10px;
+    font-size: 12px;
+    font-style: normal;
+  }
+}
