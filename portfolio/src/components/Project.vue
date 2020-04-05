@@ -1,20 +1,36 @@
 <template>
   <div class="project">
-    <!-- {{ name }} -->
     <img
       v-if="preview"
       v-bind:src="require(`../assets/${preview}`)"
+      v-bind:alt="name"
+      v-bind:title="name"
     />
-    <div class="description">
-      <h4>{{ field }}</h4>
-      <ul v-if="tasks">
-        <li
-          v-for="(task, index) in tasks"
-          :key=index
-        >
-          {{task}}
-        </li>
-      </ul>
+    <div class="information">
+      <div class="description">
+        <h4>{{ field }}</h4>
+        <ul v-if="tasks">
+          <li
+            v-for="(task, index) in tasks"
+            :key=index
+          >
+            {{task}}
+          </li>
+        </ul>
+      </div>
+      <span
+        v-if="opensource"
+        class="open-source"
+      >
+        <font-awesome-icon
+          :icon="[
+            'fab',
+            'osi'
+          ]"
+          size="2x"
+        />
+        <span>Open Source</span>
+      </span>
     </div>
   </div>
 </template>
@@ -27,6 +43,7 @@ export default {
     preview: String,
     field: String,
     tasks: Array,
+    opensource: Boolean,
   },
 };
 </script>
@@ -38,10 +55,28 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: top;
+  direction: ltr;
 }
 
 .description {
   margin: 30px 0;
+}
+
+.open-source {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+
+  span {
+    background: linear-gradient(transparent 50%, #3DA639 10px);
+  }
+
+  svg {
+    color: #1E531D;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: #3DA639;
+  }
 }
 
 .project {
@@ -75,16 +110,26 @@ img {
       margin-top: 40px;
     }
 
-    &:nth-child(even) {
-      direction: rtl;
+    .information {
+      display: grid;
+    }
+
+    .open-source {
+      align-self: end;
     }
 
     .company:nth-child(odd) & {
       margin-right: 5vw;
 
       &:nth-child(even) {
+        direction: rtl;
+
         .description {
           text-align: right;
+        }
+
+        .open-source {
+          direction: ltr;
         }
       }
 
@@ -104,13 +149,19 @@ img {
 
       &:nth-child(even) {
         .description {
-          text-align: right;
+          text-align: left;
         }
       }
 
       &:nth-child(odd) {
+        direction: rtl;
+
         .description {
-          text-align: left;
+          text-align: right;
+        }
+
+        .open-source {
+          direction: ltr;
         }
       }
 
@@ -124,10 +175,6 @@ img {
 @media (min-width: 1064px) {
   .project {
     grid-template-columns: 75% 25%;
-
-    .company:nth-child(even) & {
-      margin-left: 0;
-    }
   }
 }
 </style>

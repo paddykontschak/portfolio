@@ -1,9 +1,21 @@
 <template>
   <div id="work">
     <Company
+      name="Gamebrary"
+      from="2019-12-15"
+      url="https://gamebrary.com/"
+      position="Web Developer"
+      country="Internet"
+      bg="#222226"
+      color="#FFF"
+      ongoing
+      opensource
+      v-bind:projects="gamebrary"
+    />
+    <Company
       name="planetmutlu"
-      from="16.04.2018"
-      to="29.02.2020"
+      from="2018-04-16"
+      to="2020-02-29"
       url="https://planetmutlu.com/"
       position="Web Developer"
       country="Germany"
@@ -13,8 +25,8 @@
     />
     <Company
       name="Becklyn Studios GmbH"
-      from="01.09.2016"
-      to="30.11.2017"
+      from="2016-09-01"
+      to="2017-11-30"
       url="https://www.becklyn.com/"
       position="Web Developer / Apprentice"
       country="Germany"
@@ -24,8 +36,8 @@
     />
     <Company
       name="FUF // Frank und Freunde"
-      from="01.07.2015"
-      to="31.08.2016"
+      from="2015-07-01"
+      to="2016-08-31"
       url="https://www.fuf.de/"
       position="Web Developer / Apprentice"
       country="Germany"
@@ -35,8 +47,8 @@
     />
     <Company
       name="1&1 Internet AG"
-      from="01.07.2013"
-      to="30.06.2015"
+      from="2013-07-01"
+      to="2015-06-30"
       url="https://www.1und1.de/"
       position="Web Developer"
       country="Germany"
@@ -46,8 +58,8 @@
     />
     <Company
       name="Idea Couture Inc."
-      from="01.05.2011"
-      to="28.02.2012"
+      from="2011-05-01"
+      to="2012-02-29"
       url="https://ideacouture.com/"
       position="Web Developer"
       country="Canada"
@@ -57,14 +69,25 @@
     />
     <Company
       name="Atomic 55"
-      from="01.01.2011"
-      to="30.04.2011"
+      from="2011-01-01"
+      to="2011-04-30"
       url="https://atomic55.net"
       position="Web Developer"
       country="Canada"
       bg="#FC8712"
       color="#FFF"
       v-bind:projects="atomic55"
+    />
+    <Company
+      name="Wilber loves Apple"
+      from="2007-09-01"
+      to="2008-03-31"
+      url="https://www.gimp.org/"
+      position="Software Porter"
+      country="Internet"
+      bg="#c2c2c2"
+      opensource
+      v-bind:projects="wilberlovesapple"
     />
   </div>
 </template>
@@ -78,7 +101,44 @@ export default {
     Company,
   },
 
+  /*
+  missing projects:
+
+  pm:
+  - PMKino
+  - Luv & Lee
+  - Job4u
+  - Onlinebooking
+  - Concession
+  - Gewoba
+  - Kino Kongress
+  - Beckröge
+
+  fuf:
+  - website builder
+
+  idea couture:
+  - amex prototype
+
+  atomic 55:
+  - various realtor themes with their own cms - not wordpress
+  */
+
   computed: {
+    gamebrary() {
+      const projects = [
+        {
+          name: 'Gamebrary',
+          preview: 'gamebrary.png',
+          url: '',
+          field: 'Feature Development',
+          tasks: ['HTML', 'SCSS', 'Vue'],
+        },
+      ];
+
+      return projects;
+    },
+
     planetmultu() {
       const projects = [
         {
@@ -180,10 +240,24 @@ export default {
     atomic55() {
       const projects = [
         {
-          name: '1&1 Control Center',
+          name: '',
           preview: '',
           field: 'Development',
           tasks: ['Wordpress Theming', 'LESS', 'Baselib, Qooxdoo (Javascript)', 'Maven'],
+        },
+      ];
+
+      return projects;
+    },
+
+    wilberlovesapple() {
+      const projects = [
+        {
+          name: 'Wilber Loves Apple',
+          preview: 'wilberlovesapple.png',
+          url: 'https://web.archive.org/web/20080309013625/http://darwingimp.sourceforge.net:80/',
+          field: 'Software Porting',
+          tasks: ['Bash', 'Scripting', 'Objective-C'],
         },
       ];
 

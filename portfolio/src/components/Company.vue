@@ -1,7 +1,22 @@
 <template>
   <div class="company">
-    <h2><a v-bind:href="url" target="_blank" rel="noopener">{{ name }}</a></h2>
-    <h3>{{ position }}</h3>
+    <div class="head">
+      <h2>
+        <a
+          v-bind:href="url"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ name }}
+        </a>
+      </h2>
+      <h3>{{ position }}</h3>
+      <Dates
+        :from="from"
+        :to="to"
+        :ongoing="ongoing"
+      />
+    </div>
     <div class="projects" :style=style>
       <Project
         v-for="(project, index) in projects"
@@ -10,12 +25,14 @@
         :preview="project.preview"
         :field="project.field"
         :tasks="project.tasks"
+        :opensource="opensource"
       />
     </div>
   </div>
 </template>
 
 <script>
+import Dates from './Dates.vue';
 import Project from './Project.vue';
 
 export default {
@@ -29,11 +46,14 @@ export default {
     country: String,
     bg: String,
     color: String,
+    ongoing: Boolean,
+    opensource: Boolean,
     projects: Array,
   },
 
   components: {
     Project,
+    Dates,
   },
 
   computed: {
@@ -73,11 +93,38 @@ export default {
   padding: 10px;
   width: 100vw;
   max-width: 1024px;
+  z-index: -1;
+}
+
+.head {
+  display: grid;
+  align-items: center;
+
+  .dates {
+    mix-blend-mode: difference;
+  }
 }
 
 @media (min-width: 768px) {
   .projects {
     padding: 20px;
+  }
+
+  .head {
+    grid-template: 1fr 1fr 1fr / 1fr 1fr;
+    margin-bottom: -30px;
+    align-items: start;
+
+    h3 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+
+    .dates {
+      justify-self: end;
+      grid-row: 2 / span 2;
+      grid-column: 2;
+    }
   }
 }
 </style>
