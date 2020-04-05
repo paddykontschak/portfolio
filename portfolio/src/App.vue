@@ -30,24 +30,33 @@ export default {
   margin: 0 auto;
 }
 
-h1,
-h2,
-h3 {
+h1 {
   text-transform: uppercase;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
 h3 {
-  margin: 40px 0 0;
+  font-weight: normal;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
 li {
-  display: inline-block;
-  margin: 0 10px;
+  margin: 10px 0;
 }
 
 a {
