@@ -7,13 +7,13 @@
             <span class="lastname">Kontschak</span>
         </h1>
         <div class="social">
-            <a href="https://twitter.com/paddykontschak">
+            <a href="https://twitter.com/paddykontschak" target="_blank" rel="noopener">
                 <font-awesome-icon :icon="['fab', 'twitter']" />
             </a>
-            <a href="https://github.com/paddykontschak">
+            <a href="https://github.com/paddykontschak" target="_blank" rel="noopener">
                 <font-awesome-icon :icon="['fab', 'github']" />
             </a>
-            <a href="https://codepen.io/paddykontschak/">
+            <a href="https://codepen.io/paddykontschak/" target="_blank" rel="noopener">
                 <font-awesome-icon :icon="['fab', 'codepen']" />
             </a>
         </div>
@@ -57,7 +57,6 @@ export default {
 h1 {
     line-height: .8;
     text-align: center;
-    margin: 0;
 }
 
 a {
@@ -70,7 +69,7 @@ a {
 }
 
 .firstname {
-    font-size: 64px;
+    font-size: 65px;
 }
 
 .lastname {
@@ -119,7 +118,7 @@ a {
     }
 }
 
-@media (min-width: 1084px) {
+@media (min-width: 1064px) {
     #header {
         padding: 40px 0;
     }
