@@ -124,6 +124,10 @@ img {
 @media (min-width: 1064px) {
   .project {
     grid-template-columns: 75% 25%;
+
+    .company:nth-child(even) & {
+      margin-left: 0;
+    }
   }
 }
 </style>
