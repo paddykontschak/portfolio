@@ -44,4 +44,12 @@ export default {
     text-align: right;
   }
 }
+
+@media (min-width: 1044px) {
+  .to {
+    .company:nth-child(odd) & {
+      filter: invert(1) grayscale(1) contrast(10);
+    }
+  }
+}
 </style>
