@@ -270,6 +270,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #work {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   overflow: hidden;
 }

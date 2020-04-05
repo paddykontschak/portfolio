@@ -72,7 +72,7 @@ export default {
 .company {
   &:nth-child(odd) {
     .projects {
-      margin: 20px 0;
+      margin: 20px -20px 0 0;
       transform-origin: top left;
       transform: rotate(-1deg);
     }
@@ -91,8 +91,6 @@ export default {
   color: var(--project-text);
   background-color: var(--project-bg);
   padding: 10px;
-  width: 100vw;
-  max-width: 1024px;
   z-index: -1;
 }
 
@@ -124,6 +122,17 @@ export default {
       justify-self: end;
       grid-row: 2 / span 2;
       grid-column: 2;
+    }
+  }
+}
+
+@media (min-width: 1064px) {
+  .company {
+    width: 100vw;
+    max-width: 1024px;
+
+    &:nth-child(odd) {
+      align-self: flex-end;
     }
   }
 }

@@ -61,6 +61,8 @@ export default {
   text-align: center;
   font-size: 20px;
   padding: 40px 0;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 h1 {
