@@ -45,11 +45,11 @@ img {
 }
 
 .project {
-  .company & {
+  .company:nth-child(odd) & {
     .description {
       text-align: right;
       transform-origin: top left;
-      transform: rotate(+1deg);
+      transform: rotate(1deg);
       margin-right: 15vw;
     }
   }
@@ -124,14 +124,6 @@ img {
 @media (min-width: 1064px) {
   .project {
     grid-template-columns: 75% 25%;
-
-    .company:nth-child(odd) & {
-      grid-template-columns: 75% 25%;
-    }
-
-    .company:nth-child(even) & {
-      grid-template-columns: 25% 75%;
-    }
   }
 }
 </style>

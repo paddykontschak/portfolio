@@ -50,17 +50,19 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .company {
-  .projects {
-    margin: 20px 0;
-    transform-origin: top left;
-    transform: rotate(-1deg);
+  &:nth-child(odd) {
+    .projects {
+      margin: 20px 0;
+      transform-origin: top left;
+      transform: rotate(-1deg);
+    }
   }
 
   &:nth-child(even) {
     .projects {
       margin-left: -20px;
       transform-origin: top right;
-      transform: rotate(+1deg);
+      transform: rotate(1deg);
     }
   }
 }
