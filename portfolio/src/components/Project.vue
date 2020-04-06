@@ -98,6 +98,20 @@ img {
       margin-left: 15vw;
     }
   }
+
+  .company:nth-child(1) & {
+    .description {
+      margin-right: 0;
+      transform: rotate(0);
+    }
+  }
+
+  .company:nth-child(2) & {
+    .description {
+      margin-left: 5vw;
+      transform: rotate(-.5deg);
+    }
+  }
 }
 
 @media (min-width: 768px) {

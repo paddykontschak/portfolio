@@ -45,6 +45,7 @@ export default {
     position: String,
     country: String,
     bg: String,
+    alt: String,
     color: String,
     ongoing: Boolean,
     opensource: Boolean,
@@ -60,6 +61,7 @@ export default {
     style() {
       return {
         '--project-bg': this.bg,
+        '--project-alt': this.alt,
         '--project-text': this.color,
       };
     },
@@ -72,17 +74,57 @@ export default {
 .company {
   &:nth-child(odd) {
     .projects {
-      margin: 20px -20px 0 0;
+      margin: 20px -20px 20px 0;
       transform-origin: top left;
       transform: rotate(-1deg);
+
+      &::after {
+        right: 50%;
+        transform: rotate(4deg);
+      }
     }
   }
 
   &:nth-child(even) {
     .projects {
-      margin: 20px 0 0 -20px;
+      margin: 20px 0 20px -20px;
       transform-origin: top right;
       transform: rotate(1deg);
+
+      &::after {
+        left: 50%;
+        transform: rotate(-7deg);
+      }
+    }
+  }
+
+  &:nth-child(1) {
+    .projects {
+      margin: 20px 0;
+      transform: rotate(0);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    .projects {
+      margin: 20px 0;
+      transform: rotate(.5deg);
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &:last-child {
+    .projects {
+      &::after {
+        display: none;
+      }
     }
   }
 }
@@ -92,20 +134,33 @@ export default {
   background-color: var(--project-bg);
   padding: 10px;
   z-index: -1;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 50vh;
+    z-index: -10;
+    mix-blend-mode: difference;
+    background-color: var(--project-alt);
+  }
 }
 
 .head {
   display: grid;
   align-items: center;
-
-  .dates {
-    mix-blend-mode: difference;
-  }
 }
 
 @media (min-width: 768px) {
   .projects {
     padding: 20px;
+
+    &::after {
+      width: 50vw;
+      height: 25vh;
+    }
   }
 
   .head {
@@ -133,6 +188,21 @@ export default {
 
     &:nth-child(odd) {
       align-self: flex-end;
+    }
+
+    &:nth-child(even) {
+      align-self: flex-start;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      align-self: center;
+    }
+  }
+
+  .projects {
+    &::after {
+      height: 50vh;
     }
   }
 }

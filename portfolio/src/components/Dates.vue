@@ -48,7 +48,13 @@ export default {
 @media (min-width: 1044px) {
   .to {
     .company:nth-child(odd) & {
+      mix-blend-mode: difference;
       filter: invert(1) grayscale(1) contrast(10);
+    }
+
+    .company:nth-child(1) & {
+      mix-blend-mode: none;
+      filter: none;
     }
   }
 }

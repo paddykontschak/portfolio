@@ -1,94 +1,106 @@
 <template>
   <div id="work">
-    <Company
-      name="Gamebrary"
-      from="2019-12-15"
-      url="https://gamebrary.com/"
-      position="Web Developer"
-      country="Internet"
-      bg="#222226"
-      color="#FFF"
-      ongoing
-      opensource
-      v-bind:projects="gamebrary"
-    />
-    <Company
-      name="planetmutlu"
-      from="2018-04-16"
-      to="2020-02-29"
-      url="https://planetmutlu.com/"
-      position="Web Developer"
-      country="Germany"
-      bg="#EF7D00"
-      color="#FFF"
-      v-bind:projects="planetmultu"
-    />
-    <Company
-      name="Becklyn Studios GmbH"
-      from="2016-09-01"
-      to="2017-11-30"
-      url="https://www.becklyn.com/"
-      position="Web Developer / Apprentice"
-      country="Germany"
-      bg="#1c57e1"
-      color="#FFF"
-      v-bind:projects="becklyn"
-    />
-    <Company
-      name="FUF // Frank und Freunde"
-      from="2015-07-01"
-      to="2016-08-31"
-      url="https://www.fuf.de/"
-      position="Web Developer / Apprentice"
-      country="Germany"
-      bg="#FC4934"
-      color="#FFF"
-      v-bind:projects="fuf"
-    />
-    <Company
-      name="1&1 Internet AG"
-      from="2013-07-01"
-      to="2015-06-30"
-      url="https://www.1und1.de/"
-      position="Web Developer"
-      country="Germany"
-      bg="#003d8f"
-      color="#FFF"
-      v-bind:projects="oneandone"
-    />
-    <Company
-      name="Idea Couture Inc."
-      from="2011-05-01"
-      to="2012-02-29"
-      url="https://ideacouture.com/"
-      position="Web Developer"
-      country="Canada"
-      bg="#000"
-      color="#FFF"
-      v-bind:projects="ideacouture"
-    />
-    <Company
-      name="Atomic 55"
-      from="2011-01-01"
-      to="2011-04-30"
-      url="https://atomic55.net"
-      position="Web Developer"
-      country="Canada"
-      bg="#FC8712"
-      color="#FFF"
-      v-bind:projects="atomic55"
-    />
-    <Company
-      name="Wilber loves Apple"
-      from="2007-09-01"
-      to="2008-03-31"
-      url="https://www.gimp.org/"
-      position="Software Porter"
-      country="Internet"
-      bg="#c2c2c2"
-      opensource
-      v-bind:projects="wilberlovesapple"
-    />
+    <div id="active">
+      <Company
+        name="Gamebrary"
+        from="2019-12-15"
+        url="https://gamebrary.com/"
+        position="Web Developer"
+        country="Internet"
+        bg="#222226"
+        alt="#DDDDD9"
+        color="#FFF"
+        ongoing
+        opensource
+        v-bind:projects="gamebrary"
+      />
+    </div>
+    <div id="previous">
+      <Company
+        name="planetmutlu"
+        from="2018-04-16"
+        to="2020-02-29"
+        url="https://planetmutlu.com/"
+        position="Web Developer"
+        country="Germany"
+        bg="#EF7D00"
+        alt="#0F81FF"
+        color="#FFF"
+        v-bind:projects="planetmultu"
+      />
+      <Company
+        name="Becklyn Studios GmbH"
+        from="2016-09-01"
+        to="2017-11-30"
+        url="https://www.becklyn.com/"
+        position="Web Developer / Apprentice"
+        country="Germany"
+        bg="#1c57e1"
+        alt="#E3A71D"
+        color="#FFF"
+        v-bind:projects="becklyn"
+      />
+      <Company
+        name="FUF // Frank und Freunde"
+        from="2015-07-01"
+        to="2016-08-31"
+        url="https://www.fuf.de/"
+        position="Web Developer / Apprentice"
+        country="Germany"
+        bg="#FC4934"
+        alt="#02B5CB"
+        color="#FFF"
+        v-bind:projects="fuf"
+      />
+      <Company
+        name="1&1 Internet AG"
+        from="2013-07-01"
+        to="2015-06-30"
+        url="https://www.1und1.de/"
+        position="Web Developer"
+        country="Germany"
+        bg="#003d8f"
+        alt="#FFC26F"
+        color="#FFF"
+        v-bind:projects="oneandone"
+      />
+      <Company
+        name="Idea Couture Inc."
+        from="2011-05-01"
+        to="2012-02-29"
+        url="https://ideacouture.com/"
+        position="Web Developer"
+        country="Canada"
+        bg="#000"
+        alt="#61B775"
+        color="#FFF"
+        v-bind:projects="ideacouture"
+      />
+      <Company
+        name="Atomic 55"
+        from="2011-01-01"
+        to="2011-04-30"
+        url="https://atomic55.net"
+        position="Web Developer"
+        country="Canada"
+        bg="#FC8712"
+        alt="#0277ED"
+        color="#FFF"
+        v-bind:projects="atomic55"
+      />
+      <Company
+        name="Wilber loves Apple"
+        from="2007-09-01"
+        to="2008-03-31"
+        url="https://www.gimp.org/"
+        position="Software Porter"
+        country="Internet"
+        bg="#c2c2c2"
+        alt="#3C3C3C"
+        opensource
+        v-bind:projects="wilberlovesapple"
+      />
+    </div>
   </div>
 </template>
 
@@ -119,6 +131,7 @@ export default {
 
   idea couture:
   - amex prototype
+  - misc magazine
 
   atomic 55:
   - various realtor themes with their own cms - not wordpress
@@ -272,7 +285,46 @@ export default {
 #work {
   display: flex;
   flex-direction: column;
+}
+
+#active,
+#previous {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   overflow: hidden;
+
+  &::before {
+    content: "Headline";
+    font-weight: 700;
+    font-size: 36px;
+  }
+}
+
+#active {
+  &::before {
+    content: "Active Projects";
+  }
+}
+
+#previous {
+  &::before {
+    content: "Previous Projects";
+  }
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1044px) {
+  #active,
+  #previous {
+    align-items: center;
+
+    &::before {
+      width: 100vw;
+      max-width: 1024px;
+    }
+  }
 }
 </style>
