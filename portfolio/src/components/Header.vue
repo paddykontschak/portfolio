@@ -21,7 +21,7 @@
         </div>
       </div>
       <div id="introduction">
-        <h2>Frontend Developer</h2>
+        <h2><span class="prefix">{{ prefix }}</span> Developer</h2>
         <p>
           Hey, I'm a developer from Germany<br/>
           with over 9 years of professional experience all over the globe.<br/>
@@ -55,6 +55,29 @@ export default {
   name: 'Header',
   props: {
     hire: Boolean,
+  },
+
+  data() {
+    return {
+      prefix: 'Frontend',
+    };
+  },
+
+  mounted() {
+    this.setPrefix();
+  },
+
+  methods: {
+    setPrefix() {
+      const prefixes = ['Fullstack', 'UI/UX', 'Frontend']; // add Game in the future
+      let i = 0;
+
+      setInterval(() => {
+        this.prefix = prefixes[i];
+        i += 1;
+        if (i === prefixes.length) i = 0;
+      }, 2000);
+    },
   },
 };
 </script>
@@ -96,6 +119,14 @@ export default {
 h1 {
   line-height: .8;
   text-align: center;
+}
+
+h2 {
+  font-weight: normal;
+
+  .prefix {
+    font-weight: bold;
+  }
 }
 
 a {
