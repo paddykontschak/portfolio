@@ -1,45 +1,51 @@
 <template>
   <div id="header">
-    <h1 v-if="hire">For Hire</h1>
-    <div id="top">
-      <h1>
-        <span class="firstname">Patrick</span>
-        <span class="lastname">Kontschak</span>
-      </h1>
-      <div id="social">
-        <a href="https://twitter.com/paddykontschak" target="_blank" rel="noopener">
-          <font-awesome-icon :icon="['fab', 'twitter']" />
+    <div class="teaser"></div>
+    <div class="wrapper">
+      <h1 v-if="hire">For Hire</h1>
+      <div id="top">
+        <h1>
+          <span class="firstname">Patrick</span>
+          <span class="lastname">Kontschak</span>
+        </h1>
+        <div id="social">
+          <a href="https://twitter.com/paddykontschak" target="_blank" rel="noopener">
+            <font-awesome-icon :icon="['fab', 'twitter']" />
+          </a>
+          <a href="https://github.com/paddykontschak" target="_blank" rel="noopener">
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
+          <a href="https://codepen.io/paddykontschak/" target="_blank" rel="noopener">
+            <font-awesome-icon :icon="['fab', 'codepen']" />
+          </a>
+        </div>
+      </div>
+      <div id="introduction">
+        <h2>Frontend Developer</h2>
+        <p>
+          Hey, I'm a developer from Germany<br/>
+          with over 9 years of professional experience all over the globe.<br/>
+          <br/>
+          I specialize in user experience, responsive design and modern CSS solutions.
+        </p>
+      </div>
+      <div id="nav">
+        <a href="#skills">
+          Skills
         </a>
-        <a href="https://github.com/paddykontschak" target="_blank" rel="noopener">
-          <font-awesome-icon :icon="['fab', 'github']" />
+        <a href="#education">
+          Education
         </a>
-        <a href="https://codepen.io/paddykontschak/" target="_blank" rel="noopener">
-          <font-awesome-icon :icon="['fab', 'codepen']" />
+        <a href="#work">
+          Work
+        </a>
+        <a href="#about">
+          About
+        </a>
+        <a href="#contact">
+          Contact
         </a>
       </div>
-    </div>
-    <div id="introduction">
-      <h2>Frontend Developer</h2>
-      <p>
-        Hey, I'm a developer from Germany<br/>
-        with over 9 years of professional experience all over the globe.<br/>
-        <br/>
-        I specialize in user experience, responsive design and modern CSS solutions.
-      </p>
-    </div>
-    <div id="nav">
-      <a href="#work">
-        Work
-      </a>
-      <a href="#education">
-        Education
-      </a>
-      <a href="#skills">
-        Skills
-      </a>
-      <a href="#contact">
-        Contact
-      </a>
     </div>
   </div>
 </template>
@@ -56,13 +62,35 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #header {
-  display: grid;
-  height: 100vh;
   text-align: center;
   font-size: 20px;
-  padding: 40px 0;
-  max-width: 1024px;
-  margin: 0 auto;
+
+  .teaser {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/javascript.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // filter: brightness(25%);
+    filter: blur(5px);
+    opacity: .2;
+  }
+
+  .wrapper {
+    // filter: invert(1);
+    display: grid;
+    height: 100vh;
+    padding: 40px 0;
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
 
 h1 {
@@ -117,7 +145,9 @@ a {
 
 @media (min-width: 768px) {
   #header {
-    padding: 40px;
+    .wrapper {
+      padding: 40px;
+    }
   }
 
   #top {
@@ -148,7 +178,9 @@ a {
 
 @media (min-width: 1064px) {
   #header {
-    padding: 40px 0;
+    .wrapper {
+      padding: 40px 0;
+    }
   }
 }
 </style>
