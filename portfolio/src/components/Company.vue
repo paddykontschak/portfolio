@@ -100,7 +100,8 @@ export default {
 
   &:nth-child(1) {
     .projects {
-      margin: 20px 0;
+      margin: 20px -20px;
+      padding: 20px;
       transform: rotate(0);
 
       &::after {
@@ -111,7 +112,8 @@ export default {
 
   &:nth-child(2) {
     .projects {
-      margin: 20px 0;
+      margin: 20px -20px;
+      padding: 20px;
       transform: rotate(.5deg);
 
       &::after {
@@ -197,6 +199,10 @@ export default {
     &:nth-child(1),
     &:nth-child(2) {
       align-self: center;
+
+      .projects {
+        margin: 20px 0;
+      }
     }
   }
 

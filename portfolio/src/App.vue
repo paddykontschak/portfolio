@@ -5,6 +5,7 @@
     <Skills/>
     <Education/>
     <Work/>
+    <About/>
     <Footer/>
   </div>
 </template>
@@ -14,6 +15,7 @@ import Header from './components/Header.vue';
 import Skills from './components/Skills.vue';
 import Education from './components/Education.vue';
 import Work from './components/Work.vue';
+import About from './components/About.vue';
 import Footer from './components/Footer.vue';
 
 export default {
@@ -23,6 +25,7 @@ export default {
     Skills,
     Education,
     Work,
+    About,
     Footer,
   },
 };
@@ -35,6 +38,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
+  overflow-x: hidden;
 }
 
 h1 {
