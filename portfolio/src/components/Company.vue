@@ -8,6 +8,7 @@
           rel="noopener"
         >
           {{ name }}
+          <font-awesome-icon :icon="['fas', 'external-link-alt']" />
         </a>
       </h2>
       <h3>{{ position }}</h3>
@@ -23,7 +24,9 @@
         :key=index
         :name="project.name"
         :preview="project.preview"
+        :url="project.url"
         :field="project.field"
+        :description="project.description"
         :tasks="project.tasks"
         :opensource="opensource"
       />
@@ -125,7 +128,10 @@ export default {
   &:last-child {
     .projects {
       &::after {
-        display: none;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 150%;
       }
     }
   }
@@ -153,6 +159,10 @@ export default {
 .head {
   display: grid;
   align-items: center;
+
+  svg {
+    font-size: 50%;
+  }
 }
 
 @media (min-width: 768px) {

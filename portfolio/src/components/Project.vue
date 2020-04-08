@@ -1,14 +1,28 @@
 <template>
   <div class="project">
+    <a
+      v-if="preview && url"
+      v-bind:href="url"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        v-bind:src="require(`../assets/${preview}`)"
+        v-bind:alt="name"
+        v-bind:title="name"
+      />
+      <font-awesome-icon :icon="['fas', 'external-link-alt']" />
+    </a>
     <img
-      v-if="preview"
+      v-else-if="preview"
       v-bind:src="require(`../assets/${preview}`)"
       v-bind:alt="name"
       v-bind:title="name"
     />
     <div class="information">
       <div class="description">
-        <h4>{{ field }}</h4>
+        <h4 v-if="field">{{ field }}</h4>
+        <p v-if="description">{{ description }}</p>
         <ul v-if="tasks">
           <li
             v-for="(task, index) in tasks"
@@ -41,7 +55,9 @@ export default {
   props: {
     name: String,
     preview: String,
+    url: String,
     field: String,
+    description: String,
     tasks: Array,
     opensource: Boolean,
   },
@@ -80,6 +96,22 @@ img {
 }
 
 .project {
+  a {
+    color: #fff;
+    position: relative;
+
+    &:hover {
+      filter: brightness(110%);
+    }
+
+    svg {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      mix-blend-mode: difference;
+    }
+  }
+
   .company:nth-child(odd) & {
     .description {
       text-align: right;
@@ -183,12 +215,17 @@ img {
         margin-left: 0;
       }
     }
+
+    .company:nth-child(1) &,
+    .company:nth-child(2) & {
+      margin-right: 0;
+    }
   }
 }
 
 @media (min-width: 1064px) {
   .project {
-    grid-template-columns: 75% 25%;
+    grid-template-columns: calc(75% - 20px) calc(25% - 20px);
   }
 }
 </style>

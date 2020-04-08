@@ -38,6 +38,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+/*
+  variable fonts
+  based on mouse cursor
+*/
+
 #footer {
   padding: 100px 0;
   text-align: center;

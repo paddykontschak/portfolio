@@ -37,6 +37,7 @@ import {
   faGitlab,
   faBitbucket,
 } from '@fortawesome/free-brands-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 
@@ -78,6 +79,7 @@ library.add(
   faGithub,
   faGitlab,
   faBitbucket,
+  faExternalLinkAlt,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;

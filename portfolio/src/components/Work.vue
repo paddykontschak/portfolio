@@ -113,39 +113,16 @@ export default {
     Company,
   },
 
-  /*
-  missing projects:
-
-  pm:
-  - PMKino
-  - Luv & Lee
-  - Job4u
-  - Onlinebooking
-  - Concession
-  - Gewoba
-  - Kino Kongress
-  - Beckröge
-
-  fuf:
-  - website builder
-
-  idea couture:
-  - amex prototype
-  - misc magazine
-
-  atomic 55:
-  - various realtor themes with their own cms - not wordpress
-  */
-
   computed: {
     gamebrary() {
       const projects = [
         {
           name: 'Gamebrary',
           preview: 'gamebrary.png',
-          url: '',
+          url: 'https://gamebrary.com/',
           field: 'Feature Development',
-          tasks: ['HTML', 'SCSS', 'Vue'],
+          description: 'Various features for an open source game collection tracking website',
+          tasks: ['Vue'],
         },
       ];
 
@@ -157,30 +134,50 @@ export default {
         {
           name: 'UVHB',
           preview: 'uvhb.png',
-          url: '',
+          url: 'https://uvhb.de/',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'PHP', 'HTML', 'CSS (SCSS)', 'Javascript'],
+          description: 'Complete website overhaul and relaunch for the business associations in Bremen',
+          tasks: ['Wordpress Theming', 'Javascript'],
+        },
+        {
+          name: 'PMKino',
+          preview: 'pmkino.png',
+          url: 'https://planetmutlu.com/project/pmkino-websites/',
+          field: 'Feature Development',
+          description: 'Various features for a modern cinema whitelabel solution',
+          tasks: ['Wordpress Core', 'React'],
         },
         {
           name: 'Kinomarkt Deutschland',
           preview: 'kinomarkt.png',
-          url: '',
+          url: 'https://kinomarktdeutschland.de/',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'PHP', 'HTML', 'CSS (SCSS)', 'Javascript (jQuery)'],
+          description: 'Registration website for a new cinema cooperative for Germany',
+          tasks: ['Wordpress Theming', 'jQuery'],
+        },
+        {
+          name: 'Luv & Lee',
+          preview: 'luvundlee.png',
+          url: 'https://www.luvundlee-amrum.de/',
+          field: 'Development',
+          description: 'Single Page Website for a documentary about the island Amrum',
+          tasks: ['Wordpress Theming', 'Javascript'],
         },
         {
           name: 'Mund + Bruns',
           preview: 'mundundbruns.png',
-          url: '',
+          url: 'https://mund-bruns.de/',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'PHP', 'HTML', 'CSS (Tailwind)', 'Javascript'],
+          description: 'Website relaunch for an international hanseatic cargo company',
+          tasks: ['Wordpress Theming', 'Javascript'],
         },
         {
           name: 'Intern',
-          preview: '',
+          preview: 'placeholder.png',
           url: '',
           field: 'Development',
-          tasks: ['PHP', 'HTML', 'CSS (SCSS)', 'Javascript (React)'],
+          description: 'Minor and major adjustments, bugfixing and general development for various client work and internal projects',
+          tasks: ['PHP', 'SCSS', 'React', 'Electron'],
         },
       ];
 
@@ -192,16 +189,26 @@ export default {
         {
           name: 'NetApp',
           preview: 'netapp.png',
-          url: '',
+          url: 'https://web.archive.org/web/20190731124332/http://data-analytics.netapp.com/en/',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'PHP', 'HTML', 'CSS (SCSS)', 'Javascript'],
+          description: 'Animation-rich website for Big Data',
+          tasks: ['Symfony', 'ES6'],
         },
         {
           name: 'Berthold Leibinger Stiftung',
           preview: 'berthold.png',
-          url: '',
+          url: 'https://www.leibinger-stiftung.de/',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'PHP', 'HTML', 'CSS (SCSS)', 'Javascript (jQuery)'],
+          description: 'Clean and modern website for a German foundation',
+          tasks: ['Symfony', 'ES6'],
+        },
+        {
+          name: 'Intern',
+          preview: 'placeholder.png',
+          url: '',
+          field: 'Apprenticeship',
+          description: 'Second year of my Fachinformatik apprenticeship',
+          // tasks: ['PHP', 'SCSS', 'React'],
         },
       ];
 
@@ -213,9 +220,25 @@ export default {
         {
           name: 'Team Technik',
           preview: 'teamtechnik.png',
-          url: '',
+          url: 'https://web.archive.org/web/20170612030259/http://www.teamtechnik.com/',
           field: 'Development',
-          tasks: ['Typo3', 'HTML', 'SCSS', 'Javascript'],
+          description: 'Website relaunch for an automation and trade fair organisation',
+          tasks: ['Typo3', 'Javascript'],
+        },
+        {
+          name: 'Jeanee',
+          preview: 'jeanee.png',
+          url: 'https://www.jeanee.de/',
+          field: 'Core Feature Development',
+          description: 'Core features for a mobile-first CMS to create single page website without coding knowledge',
+          tasks: ['Angular'],
+        },
+        {
+          name: 'Intern',
+          preview: 'placeholder.png',
+          url: '',
+          field: 'Apprenticeship',
+          description: 'First year of my Fachinformatik apprenticeship',
         },
       ];
 
@@ -227,8 +250,9 @@ export default {
         {
           name: '1&1 Control Center',
           preview: 'oneandone.png',
-          url: '',
+          url: 'https://account.1und1.de/',
           field: 'Development',
+          description: 'Redesign of the control center and the customer relations tool with an international team of web developers',
           tasks: ['Pustefix (Java)', 'Baselib, Qooxdoo (Javascript)', 'Maven'],
         },
       ];
@@ -239,11 +263,28 @@ export default {
     ideacouture() {
       const projects = [
         {
+          name: 'MISC Magazine',
+          preview: 'misc.png',
+          url: 'https://web.archive.org/web/20120523071023/http://www.miscmagazine.com:80/',
+          field: 'Development Support',
+          description: 'Minor adjustments, bugfixing and general development for a design magazine',
+          tasks: ['CakePHP', 'jQuery'],
+        },
+        {
           name: 'Aviva Community Fund',
           preview: 'aviva.png',
-          url: '',
+          url: 'http://web.archive.org/web/20110902084811/http://www.avivacommunityfund.org:80/',
           field: 'Development',
-          tasks: ['CakePHP', 'LESS', ''],
+          description: 'Crowdfunding website for an annually recurring community fund',
+          tasks: ['CakePHP', 'jQuery'],
+        },
+        {
+          name: 'Intern',
+          preview: 'placeholder.png',
+          url: '',
+          field: 'Prototype Development',
+          description: 'Prototypes for possible projects for Fortune 500 companies',
+          tasks: ['Bootstrap', 'SASS', 'LESS', 'CoffeeScript', 'Backbone', 'Mustache'],
         },
       ];
 
@@ -253,10 +294,12 @@ export default {
     atomic55() {
       const projects = [
         {
-          name: '',
-          preview: '',
+          name: 'CMS Theming',
+          preview: 'placeholder.png',
+          url: '',
           field: 'Development',
-          tasks: ['Wordpress Theming', 'LESS', 'Baselib, Qooxdoo (Javascript)', 'Maven'],
+          description: 'Various themes for Canadian realtors',
+          tasks: ['Custom CMS theming', 'LESS', 'jQuery'],
         },
       ];
 
@@ -270,6 +313,7 @@ export default {
           preview: 'wilberlovesapple.png',
           url: 'https://web.archive.org/web/20080309013625/http://darwingimp.sourceforge.net:80/',
           field: 'Software Porting',
+          description: 'Providing an unofficial Mac OS X Tiger port for the popular open source image editor',
           tasks: ['Bash', 'Scripting', 'Objective-C'],
         },
       ];
