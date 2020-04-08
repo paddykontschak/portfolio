@@ -141,7 +141,7 @@ export default {
         },
         {
           name: 'PMKino',
-          preview: 'pmkino.png',
+          preview: 'pmkino-alt.png',
           url: 'https://planetmutlu.com/project/pmkino-websites/',
           field: 'Feature Development',
           description: 'Various features for a modern cinema whitelabel solution',

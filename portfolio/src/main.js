@@ -34,10 +34,24 @@ import {
   faUbuntu,
   faJava,
   faUnity,
-  faGitlab,
-  faBitbucket,
+  faAdobe,
+  faSketch,
 } from '@fortawesome/free-brands-svg-icons';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faExternalLinkAlt,
+  faCodeBranch,
+  faMobileAlt,
+  faTabletAlt,
+  faDesktop,
+  faBezierCurve,
+  faPalette,
+  faDraftingCompass,
+  faMagic,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faMoon,
+  faHandPointer,
+} from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import App from './App.vue';
 
@@ -77,9 +91,19 @@ library.add(
   faUnity,
   faNpm,
   faGithub,
-  faGitlab,
-  faBitbucket,
+  faCodeBranch,
   faExternalLinkAlt,
+  faMobileAlt,
+  faTabletAlt,
+  faDesktop,
+  faAdobe,
+  faSketch,
+  faBezierCurve,
+  faPalette,
+  faDraftingCompass,
+  faMoon,
+  faHandPointer,
+  faMagic,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;

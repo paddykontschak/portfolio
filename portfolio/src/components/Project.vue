@@ -151,6 +151,7 @@ img {
     display: grid;
     grid-auto-flow: column;
     grid-gap: 40px;
+    grid-template-columns: calc(75% - 20px) calc(25% - 20px);
 
     + .project {
       margin-top: 40px;
@@ -220,12 +221,6 @@ img {
     .company:nth-child(2) & {
       margin-right: 0;
     }
-  }
-}
-
-@media (min-width: 1064px) {
-  .project {
-    grid-template-columns: calc(75% - 20px) calc(25% - 20px);
   }
 }
 </style>
