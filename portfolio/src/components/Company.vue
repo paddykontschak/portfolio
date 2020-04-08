@@ -141,8 +141,6 @@ export default {
   color: var(--project-text);
   background-color: var(--project-bg);
   padding: 10px;
-  z-index: -1;
-  position: relative;
 
   &::after {
     content: '';
@@ -159,6 +157,7 @@ export default {
 .head {
   display: grid;
   align-items: center;
+  position: relative;
 
   svg {
     font-size: 50%;
