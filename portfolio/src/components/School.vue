@@ -1,7 +1,15 @@
 <template>
   <div class="school">
     <div class="logo" :style=style></div>
-    <!-- {{ name }} -->
+    <div class="description">
+      <h4>{{ name }}</h4>
+      <p v-if="description">{{ description }}</p>
+      <h5 v-if="from && to">{{ from }} - {{ to }}</h5>
+      <h5 v-else-if="from && !to">since {{ from }}</h5>
+      <h5 v-if="status == 'ongoing'">Currently attending</h5>
+      <h5 v-if="status == 'cancelled'">Dropped out</h5>
+      <h5 v-if="degree">Degree: {{ degree }}</h5>
+    </div>
   </div>
 </template>
 
@@ -12,8 +20,11 @@ export default {
     name: String,
     logo: String,
     url: String,
+    from: String,
+    to: String,
     degree: String,
-    ongoing: Boolean,
+    description: String,
+    status: String,
   },
 
   computed: {
@@ -40,6 +51,10 @@ export default {
   &:hover {
     filter: saturate(1);
   }
+}
+
+.description {
+  margin-top: 20px;
 }
 
 @media (min-width: 768px) {

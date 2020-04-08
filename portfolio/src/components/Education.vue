@@ -2,27 +2,48 @@
   <div id="education">
     <School
       name="Institut für Lernsysteme"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Obcaecati saepe repellendus maiores iste nulla, veritatis magni debitis sed cumque,
+        dolorum laboriosam magnam nesciunt quis quae quo ex, animi minus ipsam."
       :logo="require('../assets/ils.svg')"
       url="https://www.ils.de/"
+      from="2019"
       degree=""
-      ongoing
-    />
-    <School
-      name="Wilhelm Wagenfeld Schule"
-      :logo="require('../assets/wws.svg')"
-      url="https://wilhelm-wagenfeld-schule.eu/"
-      degree="Abitur"
-    />
-    <School
-      name="Karlsruher Institut für Technologie"
-      :logo="require('../assets/kit.svg')"
-      url="https://www.kit.edu/"
+      status="ongoing"
     />
     <School
       name="it.schule stuttgart"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Obcaecati saepe repellendus maiores iste nulla, veritatis magni debitis sed cumque,
+        dolorum laboriosam magnam nesciunt quis quae quo ex, animi minus ipsam."
       :logo="require('../assets/its.svg')"
       url="https://www.its-stuttgart.de/"
+      from="2015"
+      to="2017"
       degree="Fachinformatik Richtung Anwendungsentwicklung"
+    />
+    <School
+      name="Karlsruher Institut für Technologie"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Obcaecati saepe repellendus maiores iste nulla, veritatis magni debitis sed cumque,
+        dolorum laboriosam magnam nesciunt quis quae quo ex, animi minus ipsam."
+      :logo="require('../assets/kit.svg')"
+      url="https://www.kit.edu/"
+      from="2013"
+      to="2014"
+      degree=""
+      status="cancelled"
+    />
+    <School
+      name="Wilhelm Wagenfeld Schule"
+      description="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Obcaecati saepe repellendus maiores iste nulla, veritatis magni debitis sed cumque,
+        dolorum laboriosam magnam nesciunt quis quae quo ex, animi minus ipsam."
+      :logo="require('../assets/wws.svg')"
+      url="https://wilhelm-wagenfeld-schule.eu/"
+      from="2006"
+      to="2009"
+      degree="Abitur"
     />
   </div>
 </template>
@@ -42,14 +63,13 @@ export default {
 <style scoped lang="scss">
 #education {
   margin-top: 40px;
-  padding: 100px;
+  padding: 40px 20px;
   min-height: 50vh;
   display: grid;
-  align-items: center;
+  align-items: top;
   position: relative;
   justify-items: center;
-  grid-gap: 40px;
-  grid-template: repeat(auto-fit, minmax(100px, 1fr))/repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
 
   &::before {
     content: "Education";
@@ -65,8 +85,10 @@ export default {
   #education {
     width: 100vw;
     max-width: 1024px;
+    padding: 100px 50px;
     margin: 40px auto 0;
-    grid-template-rows: 1fr;
+    grid-gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
