@@ -48,12 +48,12 @@
         <span>Git</span>
       </span>
       <span>
-        <font-awesome-icon :icon="['fab', 'github']" />
-        <span>Github</span>
-      </span>
-      <span>
         <font-awesome-icon :icon="['fas', 'code-branch']" />
         <span>SVN</span>
+      </span>
+      <span>
+        <font-awesome-icon :icon="['fab', 'github']" />
+        <span>Github, Gitlab, Bitbucket</span>
       </span>
     </div>
     <div class="field">
