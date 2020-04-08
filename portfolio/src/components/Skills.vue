@@ -5,9 +5,11 @@
       <font-awesome-icon :icon="['fab', 'css3-alt']" />
       <font-awesome-icon :icon="['fab', 'sass']" />
       <font-awesome-icon :icon="['fab', 'less']" />
+      <span class="spacer">&nbsp;</span>
       <font-awesome-icon :icon="['fab', 'html5']" />
       <font-awesome-icon :icon="['fab', 'js']" />
       <font-awesome-icon :icon="['fab', 'react']" />
+      <span class="spacer">&nbsp;</span>
       <font-awesome-icon :icon="['fab', 'vuejs']" />
       <font-awesome-icon :icon="['fab', 'wordpress']" />
       <font-awesome-icon :icon="['fab', 'php']" />
@@ -93,6 +95,10 @@ export default {
     + .field {
       padding-top: 50px;
     }
+
+    .spacer {
+      display: none;
+    }
   }
 }
 
@@ -105,11 +111,15 @@ export default {
     .field {
       // padding: 100px 20px 50px;
       grid-gap: 80px;
-      grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(auto-fit, minmax(50px, 1fr));
+      grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(4, 1fr);
 
       h3 {
         grid-column: 1 / 1;
         grid-row: 1 / -1;
+      }
+
+      .spacer {
+        display: block;
       }
     }
   }
@@ -126,7 +136,7 @@ export default {
     }
 
     .field {
-      padding: 100px 150px 50px;
+      padding: 100px 40px 50px 40px;
       grid-gap: 120px;
     }
   }
