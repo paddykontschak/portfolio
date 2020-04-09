@@ -30,19 +30,19 @@
         </p>
       </div>
       <div id="nav">
-        <a href="#skills">
+        <a href="#" v-scroll-to="'#skills'">
           Skills
         </a>
-        <a href="#education">
+        <a href="#" v-scroll-to="'#education'">
           Education
         </a>
-        <a href="#work">
+        <a href="#" v-scroll-to="'#work'">
           Work
         </a>
-        <a href="#about">
+        <a href="#" v-scroll-to="'#about'">
           About
         </a>
-        <a href="#contact">
+        <a href="#" v-scroll-to="'#contact'">
           Contact
         </a>
       </div>

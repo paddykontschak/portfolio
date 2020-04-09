@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueScrollTo from 'vue-scrollto';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faTwitter,
@@ -107,6 +108,8 @@ library.add(
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;
+
+Vue.use(VueScrollTo);
 
 new Vue({
   render: (h) => h(App),
