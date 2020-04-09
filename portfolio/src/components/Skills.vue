@@ -180,7 +180,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #skills {
-  margin-top: 40px;
+  padding-top: 40px;
   min-height: 50vh;
   position: relative;
 
@@ -193,6 +193,7 @@ export default {
     font-weight: 700;
     font-size: 36px;
     position: absolute;
+    padding-top: 40px;
     left: 20px;
     top: 0;
   }
@@ -259,7 +260,7 @@ export default {
   #skills {
     width: 100vw;
     max-width: 1024px;
-    margin: 40px auto 0;
+    margin: 0 auto;
 
     svg {
       font-size: 50px;

@@ -62,8 +62,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #education {
-  margin-top: 40px;
-  padding: 40px 20px;
+  padding: 80px 20px 40px;
   min-height: 50vh;
   display: grid;
   align-items: top;
@@ -76,6 +75,7 @@ export default {
     font-weight: 700;
     font-size: 36px;
     position: absolute;
+    padding-top: 40px;
     left: 20px;
     top: 0;
   }

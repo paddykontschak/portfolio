@@ -161,6 +161,7 @@ export default {
 
   svg {
     font-size: 50%;
+    vertical-align: baseline;
   }
 }
 
@@ -186,8 +187,16 @@ export default {
 
     .dates {
       justify-self: end;
-      grid-row: 2 / span 2;
+      align-self: end;
+      grid-row: 1 / span 2;
       grid-column: 2;
+
+      .company:nth-child(n+2) & {
+        justify-self: end;
+        align-self: start;
+        grid-row: 2 / span 2;
+        grid-column: 2;
+      }
     }
   }
 }

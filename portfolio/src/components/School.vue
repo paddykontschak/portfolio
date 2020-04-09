@@ -55,6 +55,10 @@ export default {
 
 .description {
   margin-top: 20px;
+
+  h5 {
+    margin: 0;
+  }
 }
 
 @media (min-width: 768px) {
