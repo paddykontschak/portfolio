@@ -85,7 +85,7 @@ export default {
   #education {
     width: 100vw;
     max-width: 1024px;
-    padding: 100px 50px;
+    padding: 100px 20px;
     margin: 40px auto 0;
     grid-gap: 40px;
     grid-template-columns: repeat(2, 1fr);
@@ -94,6 +94,8 @@ export default {
 
 @media (min-width: 1064px) {
   #education {
+    padding: 100px 0;
+
     &::before {
       left: 0;
     }

@@ -154,7 +154,7 @@ img {
     grid-template-columns: calc(75% - 20px) calc(25% - 20px);
 
     + .project {
-      margin-top: 40px;
+      margin-top: 20px;
     }
 
     .information {
@@ -220,6 +220,7 @@ img {
     .company:nth-child(1) &,
     .company:nth-child(2) & {
       margin-right: 0;
+      margin-left: 0;
     }
   }
 }

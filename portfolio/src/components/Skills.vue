@@ -237,9 +237,7 @@ export default {
     }
 
     .field {
-      // padding: 100px 20px 50px;
-      grid-gap: 80px;
-      grid-template: repeat(auto-fit, minmax(50px, 1fr)) / repeat(4, 1fr);
+      grid-template-columns: 4fr repeat(3, 1fr);
 
       + .field {
         padding: 50px 20px;
@@ -268,8 +266,11 @@ export default {
     }
 
     .field {
-      padding: 100px 40px 50px 40px;
-      grid-gap: 120px;
+      padding: 100px 20px 50px;
+
+      + .field {
+        padding: 50px 20px;
+      }
     }
   }
 }
@@ -278,6 +279,14 @@ export default {
   #skills {
     &::before {
       left: 0;
+    }
+
+    .field {
+      padding: 100px 0 20px;
+
+      + .field {
+        padding: 20px 0;
+      }
     }
   }
 }
