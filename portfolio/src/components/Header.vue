@@ -93,7 +93,7 @@ export default {
     display: block;
     height: 100vh;
     width: 100vw;
-    background-image: url('../assets/javascript.jpg');
+    background-image: url('../assets/vue.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
