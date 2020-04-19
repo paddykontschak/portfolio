@@ -20,7 +20,9 @@
         </div>
       </div>
       <div id="introduction">
-        <h2><span class="prefix">{{ prefix }}</span> Developer</h2>
+        <h2>
+          <span :class="['prefix', prefixClass]">{{ prefix }}</span> Developer
+        </h2>
         <!-- <p>
           Hey, I'm a developer from Germany
           with over 9 years of professional experience all over the globe.
@@ -57,6 +59,7 @@ export default {
   data() {
     return {
       prefix: 'Frontend',
+      prefixClass: 'frontend',
     };
   },
 
@@ -67,10 +70,12 @@ export default {
   methods: {
     setPrefix() {
       const prefixes = ['Fullstack', 'UI/UX', 'Frontend']; // add Game in the future
+      const classes = ['fullstack', 'ui', 'frontend']; // add Game in the future
       let i = 0;
 
       setInterval(() => {
         this.prefix = prefixes[i];
+        this.prefixClass = classes[i];
         i += 1;
         if (i === prefixes.length) i = 0;
       }, 2000);
@@ -122,7 +127,60 @@ h2 {
   font-weight: normal;
 
   .prefix {
+    padding-bottom: 5px;
+    vertical-align: middle;
+    display: inline-block;
     font-weight: bold;
+    text-align: right;
+
+    &::before,
+    &::after {
+      opacity: .25;
+      filter: blur(1px);
+      display: block;
+    }
+
+    // &::before {
+    //   background: linear-gradient(transparent, var(--text));
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+
+    // &::after {
+    //   background: linear-gradient(var(--text), transparent);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+
+    &.frontend {
+      &::before {
+        content: 'Fullstack';
+      }
+
+      &::after {
+        content: 'UI/UX';
+      }
+    }
+
+    &.ui {
+      &::before {
+        content: 'Frontend';
+      }
+
+      &::after {
+        content: 'Fullstack';
+      }
+    }
+
+    &.fullstack {
+      &::before {
+        content: 'UI/UX';
+      }
+
+      &::after {
+        content: 'Frontend';
+      }
+    }
   }
 }
 
