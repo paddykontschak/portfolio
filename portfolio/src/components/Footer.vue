@@ -49,7 +49,7 @@ export default {
 }
 
 #face {
-  font-size: 30px;
+  font-size: 1.5em;
   position: relative;
   text-transform: uppercase;
 

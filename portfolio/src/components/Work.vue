@@ -97,6 +97,7 @@
         country="Internet"
         bg="#c2c2c2"
         alt="#3C3C3C"
+        color="#000"
         opensource
         v-bind:projects="wilberlovesapple"
       />
@@ -341,7 +342,7 @@ export default {
   &::before {
     content: "Headline";
     font-weight: 700;
-    font-size: 36px;
+    font-size: 1.5em;
   }
 }
 

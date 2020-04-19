@@ -73,7 +73,7 @@ export default {
   &::before {
     content: "Education";
     font-weight: 700;
-    font-size: 30px;
+    font-size: 1.5em;
     position: absolute;
     padding-top: 40px;
     left: 20px;
