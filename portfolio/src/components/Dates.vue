@@ -49,8 +49,13 @@ export default {
   .to {
     .company:nth-child(odd) & {
       z-index: 10;
+      position: relative;
       mix-blend-mode: difference;
       filter: invert(1) grayscale(1) contrast(10);
+
+      @media (prefers-color-scheme: dark) {
+        filter: grayscale(1) contrast(10);
+      }
     }
 
     .company:nth-child(1) & {

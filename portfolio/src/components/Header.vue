@@ -2,7 +2,6 @@
   <div id="header">
     <div class="teaser"></div>
     <div class="wrapper">
-      <h1 v-if="hire">For Hire</h1>
       <div id="top">
         <h1>
           <span class="firstname">Patrick</span>
@@ -43,9 +42,9 @@
         <!-- <a href="#" v-scroll-to="'#education'">
           Education
         </a> -->
-        <a href="#" v-scroll-to="'#contact'">
+        <!-- <a href="#" v-scroll-to="'#contact'">
           Contact
-        </a>
+        </a> -->
       </div>
     </div>
   </div>
@@ -54,9 +53,6 @@
 <script>
 export default {
   name: 'Header',
-  props: {
-    hire: Boolean,
-  },
 
   data() {
     return {

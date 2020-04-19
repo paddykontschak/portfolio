@@ -14,12 +14,17 @@
         </h2>
       </div>
       <div class="about-me">
+        <h3>Hey</h3>
         <p>
-          Hey, I'm a developer from Germany
+          I'm a developer from Germany
           with over 9 years of professional experience all over the globe.
         </p>
-        <p>I specialize in user experience, responsive design and modern CSS solutions.</p>
         <p></p>
+        <p>I specialize in user experience, responsive design and modern CSS solutions.</p>
+        <span
+          v-if=hire
+          v-html="email"
+        ></span>
       </div>
     </div>
   </div>
@@ -28,20 +33,30 @@
 <script>
 export default {
   name: 'About',
-//   props: {
-//     name: String,
-//     logo: String,
-//     url: String,
-//     degree: String,
-//     ongoing: Boolean,
-//   },
-//   computed: {
-//     style() {
-//       return {
-//         'background-image': `url('${this.logo}')`,
-//       };
-//     },
-//   },
+  props: {
+    hire: Boolean,
+  },
+
+  computed: {
+    email() {
+      let email = '';
+
+      email += '<a href="mailto:';
+      email += '&#104;&#101;&#108;';
+      email += '&#108;&#111;&#64;';
+      email += '&#112;&#97;&#116;';
+      email += '&#114;&#105;&#99;';
+      email += '&#107;&#107;&#111;';
+      email += '&#110;&#116;&#115;';
+      email += '&#99;&#104;&#97;';
+      email += '&#107;&#46;&#99;';
+      email += '&#111;&#109;';
+      email += '" style="color: royalblue; text-decoration: none;">';
+      email += 'Hire me</a>';
+
+      return email;
+    },
+  },
 };
 </script>
 
@@ -51,7 +66,8 @@ export default {
 }
 
 .wrapper {
-  padding: 20px;
+  padding: 20px 20px 0;
+  margin-bottom: 70px;
 }
 
 img {
@@ -87,10 +103,14 @@ h2 {
   grid-column: 1 / -1;
   text-transform: uppercase;
   font-size: 2.5em;
-  filter: saturate(0) invert(1);
 
   span {
+    filter: saturate(0) invert(1);
     mix-blend-mode: difference;
+
+    @media (prefers-color-scheme: dark) {
+      filter: none;
+    }
   }
 
   &::before {
@@ -103,24 +123,43 @@ h2 {
     border-radius: 100%;
     background-color: crimson;
   }
-
-  @media (prefers-color-scheme: dark) {
-    filter: none;
-  }
 }
 
 .about-me {
   margin: 0 -20px;
   padding: 20px;
+  display: grid;
+  align-content: stretch;
+  position: relative;
   background-color: royalblue;
+
+  span,
+  h3 {
+    top: -.9em;
+    font-size: 4em;
+    left: 15px;
+    font-weight: 700;
+    position: absolute;
+    color: royalblue;
+    text-transform: uppercase;
+  }
+
+  span {
+    top: auto;
+    left: auto;
+    right: 15px;
+    bottom: -.95em;
+  }
 
   p {
     &:first-child {
       margin-top: 0;
     }
 
-    &:nth-last-child(1) {
+    &:nth-last-of-type(1) {
       margin-bottom: 0;
+      align-self: end;
+      text-align: right;
     }
   }
 }
@@ -128,7 +167,7 @@ h2 {
 @media (min-width: 768px) {
   .wrapper {
     display: grid;
-    grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
     width: 100vw;
     max-width: 1024px;
     margin: 0 auto;
@@ -160,9 +199,18 @@ h2 {
   }
 
   .about-me {
-    margin: 0;
-    grid-row: 3;
+    margin: 50% 0;
+    grid-row: 1 / -1;
     grid-column: 2;
+
+    h3 {
+      left: 10px;
+      top: -.85em;
+    }
+
+    span {
+      right: 10px;
+    }
   }
 }
 

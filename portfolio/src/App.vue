@@ -1,12 +1,11 @@
 <template>
   <div id="app">
-    <!-- <Header hire/> -->
     <Header/>
     <Skills/>
     <Work/>
-    <About/>
+    <About hire/>
     <!-- <Education/> -->
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 
@@ -16,7 +15,7 @@ import Skills from './components/Skills.vue';
 // import Education from './components/Education.vue';
 import Work from './components/Work.vue';
 import About from './components/About.vue';
-import Footer from './components/Footer.vue';
+// import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
@@ -26,20 +25,23 @@ export default {
     // Education,
     Work,
     About,
-    Footer,
+    // Footer,
   },
 };
 </script>
 
 <style lang="scss">
 @import '~normalize.css';
-#app {
+html {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
   background-color: var(--bg);
-  overflow-x: hidden;
+}
+
+#app {
+  overflow: hidden;
 }
 
 h1 {

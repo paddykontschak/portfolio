@@ -143,7 +143,7 @@
       </span>
       <span>
         <font-awesome-icon :icon="['fab', 'internet-explorer']" />
-        <span>IE 11 - Edge</span>
+        <span>Edge</span>
       </span>
     </div>
     <div class="field">
