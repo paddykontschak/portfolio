@@ -48,6 +48,7 @@ import {
   faPalette,
   faDraftingCompass,
   faMagic,
+  faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faMoon,
@@ -105,6 +106,7 @@ library.add(
   faMoon,
   faHandPointer,
   faMagic,
+  faChevronUp,
 );
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.config.productionTip = false;

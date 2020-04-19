@@ -6,10 +6,16 @@
     <About hire/>
     <!-- <Education/> -->
     <!-- <Footer/> -->
+    <back-to-top bottom="50px" right="50px">
+      <button type="button" class="btn btn-info btn-to-top">
+        <font-awesome-icon :icon="['fas', 'chevron-up']" />
+      </button>
+    </back-to-top>
   </div>
 </template>
 
 <script>
+import BackToTop from 'vue-backtotop';
 import Header from './components/Header.vue';
 import Skills from './components/Skills.vue';
 // import Education from './components/Education.vue';
@@ -26,6 +32,7 @@ export default {
     Work,
     About,
     // Footer,
+    BackToTop,
   },
 };
 </script>
@@ -194,5 +201,20 @@ html {
       color: var(--color-text);
     }
   }
+}
+
+.btn-to-top {
+  color: var(--text);
+  background-color: var(--bg);
+  width: 60px;
+  height: 60px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  opacity: .5;
+  font-size: 22px;
+  line-height: 22px;
+  mix-blend-mode: difference;
+  z-index: 100
 }
 </style>
