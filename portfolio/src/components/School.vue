@@ -48,9 +48,13 @@ export default {
   background-position: bottom;
   background-repeat: no-repeat;
 
-  &:hover {
-    filter: saturate(1);
-  }
+  // @media (prefers-color-scheme: dark) {
+  //   filter: saturate(0) invert(1);
+  // }
+
+  // &:hover {
+  //   filter: saturate(1);
+  // }
 }
 
 .description {

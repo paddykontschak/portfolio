@@ -22,19 +22,17 @@
       </div>
       <div id="introduction">
         <h2><span class="prefix">{{ prefix }}</span> Developer</h2>
-        <p>
-          Hey, I'm a developer from Germany<br/>
-          with over 9 years of professional experience all over the globe.<br/>
+        <!-- <p>
+          Hey, I'm a developer from Germany
+          with over 9 years of professional experience all over the globe.
+          <br/>
           <br/>
           I specialize in user experience, responsive design and modern CSS solutions.
-        </p>
+        </p> -->
       </div>
       <div id="nav">
         <a href="#" v-scroll-to="'#skills'">
           Skills
-        </a>
-        <a href="#" v-scroll-to="'#education'">
-          Education
         </a>
         <a href="#" v-scroll-to="'#work'">
           Work
@@ -42,6 +40,9 @@
         <a href="#" v-scroll-to="'#about'">
           About
         </a>
+        <!-- <a href="#" v-scroll-to="'#education'">
+          Education
+        </a> -->
         <a href="#" v-scroll-to="'#contact'">
           Contact
         </a>
@@ -85,7 +86,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #header {
-  text-align: center;
   font-size: 20px;
 
   .teaser {
@@ -93,7 +93,7 @@ export default {
     left: 0;
     top: 0;
     right: 0;
-    z-index: -1;
+    // z-index: -1;
     display: block;
     height: 100vh;
     width: 100vw;
@@ -113,6 +113,7 @@ export default {
     padding: 40px 0;
     max-width: 1024px;
     margin: 0 auto;
+    position: relative;
   }
 }
 
@@ -147,6 +148,7 @@ a {
 }
 
 #social {
+  text-align: center;
   margin-top: 40px;
 
   a {
@@ -161,22 +163,28 @@ a {
 
   p {
     display: none;
-    width: 50vw;
+    width: 300px;
+    text-align: justify;
+    text-align-last: center;
   }
 }
 
 #nav {
   align-self: end;
 
+
   a {
     display: block;
-    padding: 10px;
+    padding: 10px 20px;
   }
 }
 
 @media (min-width: 768px) {
   #header {
+    text-align: center;
+
     .wrapper {
+      grid-template-rows: 85px auto 85px;
       padding: 40px;
     }
   }

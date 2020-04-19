@@ -3,9 +3,9 @@
     <!-- <Header hire/> -->
     <Header/>
     <Skills/>
-    <Education/>
     <Work/>
     <About/>
+    <!-- <Education/> -->
     <Footer/>
   </div>
 </template>
@@ -13,7 +13,7 @@
 <script>
 import Header from './components/Header.vue';
 import Skills from './components/Skills.vue';
-import Education from './components/Education.vue';
+// import Education from './components/Education.vue';
 import Work from './components/Work.vue';
 import About from './components/About.vue';
 import Footer from './components/Footer.vue';
@@ -23,7 +23,7 @@ export default {
   components: {
     Header,
     Skills,
-    Education,
+    // Education,
     Work,
     About,
     Footer,
@@ -38,6 +38,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text);
+  background-color: var(--bg);
   overflow-x: hidden;
 }
 
@@ -72,6 +73,10 @@ li {
 
 a {
   color: var(--text);
+
+  &:hover {
+    color: var(--hover);
+  }
 }
 
 * {
@@ -79,20 +84,20 @@ a {
 }
 
 :root {
-  --text: #4a4a4a;
-  --bg: #f7f7f7;
-  --hover: #646464;
-  --shadow: #b0b0b0;
+  --text: #030303;
+  --bg: #f9f9f9;
+  --hover: #606060;
+  --shadow: #fff;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --text: #f7f7f7;
-//     --bg: #4a4a4a;
-//     --hover: #b0b0b0;
-//     --shadow: #646464;
-//   }
-// }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #fff;
+    --bg: #1d1f21;
+    --hover: #bbb;
+    --shadow: #282a2e;
+  }
+}
 
 /* Settings */
 :root {

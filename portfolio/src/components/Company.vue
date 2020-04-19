@@ -128,10 +128,11 @@ export default {
   &:last-child {
     .projects {
       &::after {
-        top: 0;
-        right: 0;
-        width: 100vw;
-        height: 150%;
+        // top: 0;
+        // right: 0;
+        // width: 100vw;
+        // height: 150%;
+        display: none;
       }
     }
   }

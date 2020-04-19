@@ -8,13 +8,13 @@
       </span>
       <span>
         <font-awesome-icon :icon="['fab', 'wordpress']" />
-        <span>Wordpres</span>
+        <span>Wordpress</span>
       </span>
       <span>
         <font-awesome-icon :icon="['fab', 'php']" />
         <span>PHP</span>
       </span>
-      <span class="spacer">&nbsp;</span>
+      <!-- <span class="spacer">&nbsp;</span> -->
       <span>
         <font-awesome-icon :icon="['fab', 'css3-alt']" />
         <span>CSS</span>
@@ -27,7 +27,7 @@
         <font-awesome-icon :icon="['fab', 'less']" />
         <span>LESS</span>
       </span>
-      <span class="spacer">&nbsp;</span>
+      <!-- <span class="spacer">&nbsp;</span> -->
       <span>
         <font-awesome-icon :icon="['fab', 'js']" />
         <span>Javascript</span>
@@ -101,7 +101,7 @@
         <span>Illustrator, Inkscape</span>
       </span>
     </div>
-    <div class="field">
+    <!-- <div class="field">
       <h3>User Experience</h3>
       <span>
         <font-awesome-icon :icon="['far', 'hand-pointer']" />
@@ -115,7 +115,7 @@
         <font-awesome-icon :icon="['far', 'moon']" />
         <span>Darkmode</span>
       </span>
-    </div>
+    </div> -->
     <div class="field">
       <h3>Responsive Design</h3>
       <span>
@@ -165,9 +165,9 @@
       <h3>Game Development</h3>
       <font-awesome-icon :icon="['fab', 'unity']" />
     </div> -->
-    <div class="field">
+    <!-- <div class="field">
       <p class="and-more">... and more (but FontAwesome's icons are limited)</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -191,7 +191,7 @@ export default {
   &::before {
     content: "Skills";
     font-weight: 700;
-    font-size: 36px;
+    font-size: 30px;
     position: absolute;
     padding-top: 40px;
     left: 20px;
@@ -209,6 +209,7 @@ export default {
 
     h3,
     .and-more {
+      font-size: 20px;
       justify-self: start;
       text-align: left;
       grid-column: 1 / -1;
@@ -216,6 +217,10 @@ export default {
 
     + .field {
       padding: 25px 20px;
+
+      &:last-child {
+        padding-bottom: 100px;
+      }
     }
 
     .spacer {
@@ -223,6 +228,12 @@ export default {
     }
 
     span {
+      &:hover {
+        svg {
+          color: var(--hover);
+        }
+      }
+
       span {
         margin-top: 20px;
         display: block;
@@ -238,15 +249,20 @@ export default {
     }
 
     .field {
-      grid-template-columns: 4fr repeat(3, 1fr);
+      max-width: 415px;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
 
       + .field {
         padding: 50px 20px;
       }
 
       h3 {
-        grid-column: 1 / 1;
-        grid-row: 1 / -1;
+        text-align: center;
+        align-self: center;
+        width: 100%;
+        // grid-column: 1 / 1;
+        // grid-row: 1 / -1;
       }
 
       .spacer {
@@ -267,10 +283,12 @@ export default {
     }
 
     .field {
-      padding: 100px 20px 50px;
+      max-width: 615px;
+      grid-gap: 60px;
+      padding: 100px 100px 20px;
 
       + .field {
-        padding: 50px 20px;
+        padding: 60px 100px 20px;
       }
     }
   }
@@ -280,14 +298,6 @@ export default {
   #skills {
     &::before {
       left: 0;
-    }
-
-    .field {
-      padding: 100px 0 20px;
-
-      + .field {
-        padding: 20px 0;
-      }
     }
   }
 }
