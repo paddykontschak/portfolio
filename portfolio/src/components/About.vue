@@ -230,4 +230,10 @@ h2 {
     }
   }
 }
+
+@media print {
+  #about {
+    display: none !important;
+  }
+}
 </style>

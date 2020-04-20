@@ -217,4 +217,31 @@ html {
   mix-blend-mode: difference;
   z-index: 100
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #030303;
+      --bg: #f9f9f9;
+      --hover: #606060;
+      --shadow: #fff;
+    }
+  }
+
+  #app {
+    -webkit-print-color-adjust: exact;
+    display: grid;
+    grid-gap: 20px;
+    grid-template: repeat(3, auto) / auto 30vw;
+  }
+
+  .btn-to-top {
+    display: none !important;
+  }
+}
 </style>

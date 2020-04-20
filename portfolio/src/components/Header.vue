@@ -276,4 +276,38 @@ a {
     }
   }
 }
+
+@media print {
+  #header {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  h1 {
+    text-align: left;
+    padding: 20px 0 0 20px;
+  }
+
+  .firstname {
+    font-size: 35px;
+  }
+
+  .lastname {
+    font-size: 22px;
+  }
+
+  #social,
+  #introduction,
+  #nav,
+  .teaser {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding: 0 !important;
+    display: block !important;
+    height: auto !important;
+    max-width: none !important;
+  }
+}
 </style>

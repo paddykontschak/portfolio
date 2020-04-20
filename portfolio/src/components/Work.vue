@@ -372,4 +372,36 @@ export default {
     }
   }
 }
+
+@media print {
+  #work {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  #active,
+  #previous {
+    position: relative;
+    overflow: visible;
+  }
+
+  #active {
+    padding-bottom: 0;
+
+    &::before {
+      content: "Work Experience";
+      text-transform: uppercase;
+      font-size: 1em;
+    }
+  }
+
+  #previous {
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
 </style>

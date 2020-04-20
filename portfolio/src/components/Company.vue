@@ -231,4 +231,43 @@ export default {
     }
   }
 }
+
+@media print {
+  .company {
+    display: block;
+    page-break-before: always;
+    page-break-inside: avoid;
+    break-before: page;
+    -webkit-region-break-inside: avoid;
+    -webkit-region-break-before: always;
+    position: relative;
+    float: none;
+    max-width: none;
+    width: 100%;
+
+    &:nth-child(odd) {
+      // width: 100vw;
+      // margin-right: calc(-40vw) !important;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      // width: 100%;
+      // margin-right: 0 !important;
+    }
+  }
+
+  h2 {
+    font-size: .9em;
+
+    svg {
+      display: none !important;
+    }
+  }
+
+  h3 {
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+}
 </style>

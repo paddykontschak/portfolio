@@ -301,4 +301,53 @@ export default {
     }
   }
 }
+
+@media print {
+  #skills {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: none !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    font-size: .8em;
+    padding-top: 20px;
+
+    svg {
+      display: none !important;
+    }
+
+    &::before {
+      text-transform: uppercase;
+      left: 0;
+      padding-top: 20px;
+      font-size: 1.25em;
+    }
+
+    .field {
+      display: block !important;
+      text-align: left !important;
+      max-width: none !important;
+      padding: 40px 0 0 !important;
+
+      + .field {
+        padding: 0 !important;
+        margin: 20px 0 0;
+      }
+
+      span {
+        span {
+          margin-top: 0;
+        }
+      }
+
+      h3 {
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: left !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 </style>

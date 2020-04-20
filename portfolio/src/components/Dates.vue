@@ -64,4 +64,11 @@ export default {
     }
   }
 }
+
+@media print {
+  .dates {
+    font-size: .8em;
+    text-transform: uppercase;
+  }
+}
 </style>

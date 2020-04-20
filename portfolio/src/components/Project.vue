@@ -224,4 +224,27 @@ img {
     }
   }
 }
+
+@media print {
+  .project {
+    a,
+    img {
+      display: none !important;
+    }
+
+    + .project {
+      margin-top: 20px;
+    }
+  }
+
+  .description {
+    font-size: .8em;
+    margin: 0 !important;
+
+    p,
+    li {
+      margin: 0;
+    }
+  }
+}
 </style>
