@@ -2,6 +2,19 @@
   <div id="work">
     <div id="active">
       <Company
+        name="Dofuslab"
+        from="2020-04-30"
+        url="https://gamebrary.com/"
+        position="Web Developer"
+        country="Internet"
+        bg="#95BD0C"
+        alt="#DDDDD9"
+        color="#000"
+        ongoing
+        opensource
+        v-bind:projects="dofuslab"
+      />
+      <Company
         name="Gamebrary"
         from="2019-12-15"
         url="https://gamebrary.com/"
@@ -115,6 +128,21 @@ export default {
   },
 
   computed: {
+    dofuslab() {
+      const projects = [
+        {
+          name: 'Dofuslab',
+          preview: 'dofuslab.png',
+          url: 'https://dofuslab.io/',
+          field: 'Development Support',
+          description: 'Documentation and bugfixing for an open source set builder for a French MMO',
+          tasks: ['Documentation', 'CSS'],
+        },
+      ];
+
+      return projects;
+    },
+
     gamebrary() {
       const projects = [
         {
@@ -174,9 +202,9 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'placeholder.png',
+          preview: 'planetmutlu-alt.jpg',
           url: '',
-          field: 'Development',
+          field: 'Other work at this company',
           description: 'Minor and major adjustments, bugfixing and general development for various client work and internal projects',
           tasks: ['PHP', 'SCSS', 'React', 'Electron'],
         },
@@ -205,11 +233,11 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'placeholder.png',
+          preview: 'becklyn.jpg',
           url: '',
           field: 'Apprenticeship',
           description: 'Second year of my Fachinformatik apprenticeship',
-          // tasks: ['PHP', 'SCSS', 'React'],
+          tasks: [''],
         },
       ];
 
@@ -236,7 +264,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'placeholder.png',
+          preview: 'fuf.jpg',
           url: '',
           field: 'Apprenticeship',
           description: 'First year of my Fachinformatik apprenticeship',
@@ -281,9 +309,9 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'placeholder.png',
+          preview: 'toronto.jpg',
           url: '',
-          field: 'Prototype Development',
+          field: 'Other work at this company',
           description: 'Prototypes for possible projects for Fortune 500 companies',
           tasks: ['Bootstrap', 'SASS', 'LESS', 'CoffeeScript', 'Backbone', 'Mustache'],
         },
@@ -296,7 +324,7 @@ export default {
       const projects = [
         {
           name: 'CMS Theming',
-          preview: 'placeholder.png',
+          preview: 'atomic55.jpg',
           url: '',
           field: 'Development',
           description: 'Various themes for Canadian realtors',

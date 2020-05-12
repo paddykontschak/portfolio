@@ -125,6 +125,12 @@ export default {
     }
   }
 
+  #active & {
+    .projects {
+      transform: rotate(0);
+    }
+  }
+
   &:last-child {
     .projects {
       &::after {

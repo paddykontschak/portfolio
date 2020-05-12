@@ -13,12 +13,13 @@
       />
       <font-awesome-icon :icon="['fas', 'external-link-alt']" />
     </a>
-    <img
-      v-else-if="preview"
-      v-bind:src="require(`../assets/${preview}`)"
-      v-bind:alt="name"
-      v-bind:title="name"
-    />
+    <div v-else-if="preview">
+      <img
+        v-bind:src="require(`../assets/${preview}`)"
+        v-bind:alt="name"
+        v-bind:title="name"
+      />
+    </div>
     <div class="information">
       <div class="description">
         <h4 v-if="field">{{ field }}</h4>
@@ -70,7 +71,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
   direction: ltr;
 }
 
@@ -142,6 +143,13 @@ img {
     .description {
       margin-left: 5vw;
       transform: rotate(-.5deg);
+    }
+  }
+
+  #active & {
+    .description {
+      margin-left: 0;
+      transform: rotate(0);
     }
   }
 }
