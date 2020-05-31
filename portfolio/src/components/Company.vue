@@ -229,6 +229,13 @@ export default {
         margin: 20px 0;
       }
     }
+
+    #active & {
+      &:nth-child(odd),
+      &:nth-child(even) {
+        align-self: center;
+      }
+    }
   }
 
   .projects {

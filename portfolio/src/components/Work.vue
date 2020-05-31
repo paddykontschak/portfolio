@@ -2,6 +2,18 @@
   <div id="work">
     <div id="active">
       <Company
+        name="Mischbar"
+        from="2020-05-01"
+        url="https://mischbar.net/"
+        position="Web Developer"
+        country="Germany"
+        bg="#fff"
+        alt="#DDDDD9"
+        color="#000"
+        ongoing
+        v-bind:projects="mischbar"
+      />
+      <!-- <Company
         name="Dofuslab"
         from="2020-04-30"
         url="https://gamebrary.com/"
@@ -13,7 +25,7 @@
         ongoing
         opensource
         v-bind:projects="dofuslab"
-      />
+      /> -->
       <Company
         name="Gamebrary"
         from="2019-12-15"
@@ -128,6 +140,21 @@ export default {
   },
 
   computed: {
+    mischbar() {
+      const projects = [
+        {
+          name: 'mischbar',
+          preview: 'mischbar.png',
+          url: 'https://mischbar.net/',
+          field: 'Development',
+          description: 'Website relaunch for a restaurant in Nuremberg',
+          tasks: ['Wordpress', 'CSS'],
+        },
+      ];
+
+      return projects;
+    },
+
     dofuslab() {
       const projects = [
         {
