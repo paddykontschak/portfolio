@@ -3,7 +3,7 @@
     <Header/>
     <Skills/>
     <Work/>
-    <About hire/>
+    <About/>
     <!-- <Education/> -->
     <!-- <Footer/> -->
     <back-to-top bottom="50px" right="50px">

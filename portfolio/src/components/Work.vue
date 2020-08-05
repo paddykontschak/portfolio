@@ -2,16 +2,16 @@
   <div id="work">
     <div id="active">
       <Company
-        name="Mischbar"
-        from="2020-05-01"
-        url="https://mischbar.net/"
+        name="mymuesli"
+        from="2020-07-15"
+        url="https://mymuesli.com/"
         position="Web Developer"
         country="Germany"
-        bg="#fff"
+        bg="#dc0050"
         alt="#DDDDD9"
-        color="#000"
+        color="#fff"
         ongoing
-        v-bind:projects="mischbar"
+        v-bind:projects="mymuesli"
       />
       <!-- <Company
         name="Dofuslab"
@@ -41,6 +41,18 @@
       />
     </div>
     <div id="previous">
+      <Company
+        name="Mischbar"
+        from="2020-05-01"
+        to="2020-06-01"
+        url="https://mischbar.net/"
+        position="Web Developer"
+        country="Germany"
+        bg="#fff"
+        alt="#DDDDD9"
+        color="#000"
+        v-bind:projects="mischbar"
+      />
       <Company
         name="planetmutlu"
         from="2018-04-16"
@@ -140,6 +152,21 @@ export default {
   },
 
   computed: {
+    mymuesli() {
+      const projects = [
+        {
+          name: 'mymuesli',
+          preview: 'mymuesli.png',
+          url: 'https://mymuesli.com/',
+          field: 'Development',
+          description: 'Various improvements and new features for a German brand of breakfast cereals',
+          tasks: ['PHP', 'SCSS'],
+        },
+      ];
+
+      return projects;
+    },
+
     mischbar() {
       const projects = [
         {

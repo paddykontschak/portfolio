@@ -4,6 +4,7 @@
       <div class="patrick">
         <img
           v-bind:src="require('../assets/patrick.png')"
+          loading="lazy"
         />
         <h2>
           <span>A</span>

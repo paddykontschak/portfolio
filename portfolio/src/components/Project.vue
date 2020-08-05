@@ -10,6 +10,7 @@
         v-bind:src="require(`../assets/${preview}`)"
         v-bind:alt="name"
         v-bind:title="name"
+        loading="lazy"
       />
       <font-awesome-icon :icon="['fas', 'external-link-alt']" />
     </a>
@@ -18,6 +19,7 @@
         v-bind:src="require(`../assets/${preview}`)"
         v-bind:alt="name"
         v-bind:title="name"
+        loading="lazy"
       />
     </div>
     <div class="information">
