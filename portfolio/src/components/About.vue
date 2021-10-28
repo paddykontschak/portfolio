@@ -93,8 +93,8 @@ img {
     right: 0;
     position: absolute;
     border-radius: 0 100% 0 0;
-    mix-blend-mode: difference;
     background-color: purple;
+    z-index: -1;
   }
 }
 
@@ -122,6 +122,7 @@ h2 {
     left: 10vw;
     position: absolute;
     border-radius: 100%;
+    mix-blend-mode: difference;
     background-color: crimson;
   }
 }
