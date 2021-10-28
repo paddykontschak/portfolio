@@ -15,6 +15,18 @@
       />
     </div>
     <div id="previous">
+      <Company
+        name="Mischbar"
+        from="2020-05-01"
+        to="2020-06-01"
+        url="https://mischbar.net/"
+        position="Web Developer"
+        country="Germany"
+        bg="#fff"
+        alt="#DDDDD9"
+        color="#000"
+        v-bind:projects="mischbar"
+      />
       <!-- <Company
         name="Dofuslab"
         from="2020-04-30"
@@ -40,18 +52,6 @@
         color="#FFF"
         opensource
         v-bind:projects="gamebrary"
-      />
-      <Company
-        name="Mischbar"
-        from="2020-05-01"
-        to="2020-06-01"
-        url="https://mischbar.net/"
-        position="Web Developer"
-        country="Germany"
-        bg="#fff"
-        alt="#DDDDD9"
-        color="#000"
-        v-bind:projects="mischbar"
       />
       <Company
         name="planetmutlu"
