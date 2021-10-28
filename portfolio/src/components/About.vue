@@ -18,7 +18,7 @@
         <h3>Hey</h3>
         <p>
           I'm a developer from Germany
-          with over 9 years of professional experience all over the globe.
+          with over 10 years of professional experience all over the globe.
         </p>
         <p></p>
         <p>I specialize in user experience, responsive design and modern CSS solutions.</p>
