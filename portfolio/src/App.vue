@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Header/>
-    <Skills/>
     <Work/>
-    <About/>
+    <Skills/>
+    <About hire/>
     <!-- <Education/> -->
     <!-- <Footer/> -->
     <back-to-top bottom="50px" right="50px">

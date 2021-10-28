@@ -13,6 +13,20 @@
         ongoing
         v-bind:projects="mymuesli"
       />
+    </div>
+    <div id="previous">
+      <Company
+        name="Mischbar"
+        from="2020-05-01"
+        to="2020-06-01"
+        url="https://mischbar.net/"
+        position="Web Developer"
+        country="Germany"
+        bg="#fff"
+        alt="#DDDDD9"
+        color="#000"
+        v-bind:projects="mischbar"
+      />
       <!-- <Company
         name="Dofuslab"
         from="2020-04-30"
@@ -29,29 +43,15 @@
       <Company
         name="Gamebrary"
         from="2019-12-15"
+        to="2020-03-13"
         url="https://gamebrary.com/"
         position="Web Developer"
         country="Internet"
         bg="#222226"
         alt="#DDDDD9"
         color="#FFF"
-        ongoing
         opensource
         v-bind:projects="gamebrary"
-      />
-    </div>
-    <div id="previous">
-      <Company
-        name="Mischbar"
-        from="2020-05-01"
-        to="2020-06-01"
-        url="https://mischbar.net/"
-        position="Web Developer"
-        country="Germany"
-        bg="#fff"
-        alt="#DDDDD9"
-        color="#000"
-        v-bind:projects="mischbar"
       />
       <Company
         name="planetmutlu"
@@ -161,6 +161,14 @@ export default {
           field: 'Development',
           description: 'Various improvements and new features for a German brand of breakfast cereals',
           tasks: ['PHP', 'SCSS'],
+        },
+        {
+          name: 'Intern',
+          preview: 'mymuesli-remote.png',
+          url: '',
+          field: 'Working from home',
+          description: '',
+          tasks: [''],
         },
       ];
 
