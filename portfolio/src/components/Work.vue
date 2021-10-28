@@ -160,7 +160,7 @@ export default {
           url: 'https://mymuesli.com/',
           field: 'Development',
           description: 'Various improvements and new features for a German brand of breakfast cereals',
-          tasks: ['PHP', 'SCSS'],
+          tasks: ['PHP', 'SCSS', 'ES6'],
         },
         {
           name: 'Intern',
