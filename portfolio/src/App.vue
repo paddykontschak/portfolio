@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header/>
-    <Work/>
     <Skills/>
+    <Work/>
     <About hire/>
     <!-- <Education/> -->
     <!-- <Footer/> -->

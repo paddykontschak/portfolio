@@ -32,11 +32,11 @@
         </p> -->
       </div>
       <div id="nav">
-        <a href="#" v-scroll-to="'#work'">
-          Work
-        </a>
         <a href="#" v-scroll-to="'#skills'">
           Skills
+        </a>
+        <a href="#" v-scroll-to="'#work'">
+          Work
         </a>
         <a href="#" v-scroll-to="'#about'">
           About
