@@ -3,7 +3,7 @@
     <div class="wrapper">
       <div class="patrick">
         <img
-          v-bind:src="require('../assets/patrick.png')"
+          v-bind:src="require('../assets/patrick.webp')"
           alt="A picture of Patrick Kontschak"
           loading="lazy"
         />

@@ -156,7 +156,7 @@ export default {
       const projects = [
         {
           name: 'mymuesli',
-          preview: 'mymuesli.png',
+          preview: 'mymuesli.webp',
           url: 'https://mymuesli.com/',
           field: 'Development',
           description: 'Various improvements and new features for a German brand of breakfast cereals',
@@ -164,7 +164,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'mymuesli-remote.png',
+          preview: 'mymuesli-remote.webp',
           url: '',
           field: 'Working from home',
           description: '',
@@ -179,7 +179,7 @@ export default {
       const projects = [
         {
           name: 'mischbar',
-          preview: 'mischbar.png',
+          preview: 'mischbar.webp',
           url: 'https://mischbar.net/',
           field: 'Development',
           description: 'Website relaunch for a restaurant in Nuremberg',
@@ -194,7 +194,7 @@ export default {
       const projects = [
         {
           name: 'Dofuslab',
-          preview: 'dofuslab.png',
+          preview: 'dofuslab.webp',
           url: 'https://dofuslab.io/',
           field: 'Development Support',
           description: 'Documentation and bugfixing for an open source set builder for a French MMO',
@@ -209,7 +209,7 @@ export default {
       const projects = [
         {
           name: 'Gamebrary',
-          preview: 'gamebrary.png',
+          preview: 'gamebrary.webp',
           url: 'https://gamebrary.com/',
           field: 'Feature Development',
           description: 'Various features for an open source game collection tracking website',
@@ -224,7 +224,7 @@ export default {
       const projects = [
         {
           name: 'UVHB',
-          preview: 'uvhb.png',
+          preview: 'uvhb.webp',
           url: 'https://uvhb.de/',
           field: 'Development',
           description: 'Complete website overhaul and relaunch for the business associations in Bremen',
@@ -232,7 +232,7 @@ export default {
         },
         {
           name: 'PMKino',
-          preview: 'pmkino-alt.png',
+          preview: 'pmkino-alt.webp',
           url: 'https://planetmutlu.com/project/pmkino-websites/',
           field: 'Feature Development',
           description: 'Various features for a modern cinema whitelabel solution',
@@ -240,7 +240,7 @@ export default {
         },
         {
           name: 'Kinomarkt Deutschland',
-          preview: 'kinomarkt.png',
+          preview: 'kinomarkt.webp',
           url: 'https://kinomarktdeutschland.de/',
           field: 'Development',
           description: 'Registration website for a new cinema cooperative for Germany',
@@ -248,7 +248,7 @@ export default {
         },
         {
           name: 'Luv & Lee',
-          preview: 'luvundlee.png',
+          preview: 'luvundlee.webp',
           url: 'https://www.luvundlee-amrum.de/',
           field: 'Development',
           description: 'Single Page Website for a documentary about the island Amrum',
@@ -256,7 +256,7 @@ export default {
         },
         {
           name: 'Mund + Bruns',
-          preview: 'mundundbruns.png',
+          preview: 'mundundbruns.webp',
           url: 'https://mund-bruns.de/',
           field: 'Development',
           description: 'Website relaunch for an international hanseatic cargo company',
@@ -264,7 +264,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'planetmutlu-alt.jpg',
+          preview: 'planetmutlu-alt.webp',
           url: '',
           field: 'Other work at this company',
           description: 'Minor and major adjustments, bugfixing and general development for various client work and internal projects',
@@ -279,7 +279,7 @@ export default {
       const projects = [
         {
           name: 'NetApp',
-          preview: 'netapp.png',
+          preview: 'netapp.webp',
           url: 'https://web.archive.org/web/20190731124332/http://data-analytics.netapp.com/en/',
           field: 'Development',
           description: 'Animation-rich website for Big Data',
@@ -287,7 +287,7 @@ export default {
         },
         {
           name: 'Berthold Leibinger Stiftung',
-          preview: 'berthold.png',
+          preview: 'berthold.webp',
           url: 'https://www.leibinger-stiftung.de/',
           field: 'Development',
           description: 'Clean and modern website for a German foundation',
@@ -295,7 +295,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'becklyn.jpg',
+          preview: 'becklyn.webp',
           url: '',
           field: 'Apprenticeship',
           description: 'Second year of my Fachinformatik apprenticeship',
@@ -310,7 +310,7 @@ export default {
       const projects = [
         {
           name: 'Team Technik',
-          preview: 'teamtechnik.png',
+          preview: 'teamtechnik.webp',
           url: 'https://web.archive.org/web/20170612030259/http://www.teamtechnik.com/',
           field: 'Development',
           description: 'Website relaunch for an automation and trade fair organisation',
@@ -318,7 +318,7 @@ export default {
         },
         {
           name: 'Jeanee',
-          preview: 'jeanee.png',
+          preview: 'jeanee.webp',
           url: 'https://www.jeanee.de/',
           field: 'Core Feature Development',
           description: 'Core features for a mobile-first CMS to create single page website without coding knowledge',
@@ -326,7 +326,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'fuf.jpg',
+          preview: 'fuf.webp',
           url: '',
           field: 'Apprenticeship',
           description: 'First year of my Fachinformatik apprenticeship',
@@ -340,7 +340,7 @@ export default {
       const projects = [
         {
           name: '1&1 Control Center',
-          preview: 'oneandone.png',
+          preview: 'oneandone.webp',
           url: 'https://account.1und1.de/',
           field: 'Development',
           description: 'Redesign of the control center and the customer relations tool with an international team of web developers',
@@ -355,7 +355,7 @@ export default {
       const projects = [
         {
           name: 'MISC Magazine',
-          preview: 'misc.png',
+          preview: 'misc.webp',
           url: 'https://web.archive.org/web/20120523071023/http://www.miscmagazine.com:80/',
           field: 'Development Support',
           description: 'Minor adjustments, bugfixing and general development for a design magazine',
@@ -363,7 +363,7 @@ export default {
         },
         {
           name: 'Aviva Community Fund',
-          preview: 'aviva.png',
+          preview: 'aviva.webp',
           url: 'http://web.archive.org/web/20110902084811/http://www.avivacommunityfund.org:80/',
           field: 'Development',
           description: 'Crowdfunding website for an annually recurring community fund',
@@ -371,7 +371,7 @@ export default {
         },
         {
           name: 'Intern',
-          preview: 'toronto.jpg',
+          preview: 'toronto.webp',
           url: '',
           field: 'Other work at this company',
           description: 'Prototypes for possible projects for Fortune 500 companies',
@@ -386,7 +386,7 @@ export default {
       const projects = [
         {
           name: 'CMS Theming',
-          preview: 'atomic55.jpg',
+          preview: 'atomic55.webp',
           url: '',
           field: 'Development',
           description: 'Various themes for Canadian realtors',
@@ -401,7 +401,7 @@ export default {
       const projects = [
         {
           name: 'Wilber Loves Apple',
-          preview: 'wilberlovesapple.png',
+          preview: 'wilberlovesapple.webp',
           url: 'https://web.archive.org/web/20080309013625/http://darwingimp.sourceforge.net:80/',
           field: 'Software Porting',
           description: 'Providing an unofficial Mac OS X Tiger port for the popular open source image editor',
