@@ -7,7 +7,7 @@
     <!-- <Education/> -->
     <!-- <Footer/> -->
     <back-to-top bottom="50px" right="50px">
-      <button type="button" class="btn btn-info btn-to-top">
+      <button type="button" aria-label="Scroll up" class="btn btn-info btn-to-top">
         <font-awesome-icon :icon="['fas', 'chevron-up']" />
       </button>
     </back-to-top>

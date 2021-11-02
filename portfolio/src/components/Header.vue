@@ -8,13 +8,13 @@
           <span class="lastname">Kontschak</span>
         </h1>
         <div id="social">
-          <a href="https://twitter.com/paddykontschak" target="_blank" rel="noopener">
+          <a href="https://twitter.com/paddykontschak" target="_blank" rel="noopener" aria-label="Twitter">
             <font-awesome-icon :icon="['fab', 'twitter']" />
           </a>
-          <a href="https://github.com/paddykontschak" target="_blank" rel="noopener">
+          <a href="https://github.com/paddykontschak" target="_blank" rel="noopener" aria-label="Github">
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
-          <a href="https://codepen.io/paddykontschak/" target="_blank" rel="noopener">
+          <a href="https://codepen.io/paddykontschak/" target="_blank" rel="noopener" aria-label="Codepen">
             <font-awesome-icon :icon="['fab', 'codepen']" />
           </a>
         </div>
